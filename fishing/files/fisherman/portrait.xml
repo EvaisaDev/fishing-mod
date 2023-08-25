@@ -1,0 +1,19 @@
+<Sprite 
+	filename="mods/fishing/files/fisherman/portrait.png"
+	offset_x="0" 
+	offset_y="0"
+	default_animation="stand"
+  >
+	<RectAnimation 
+		frame_count="1"
+		frame_width="64"
+		frame_height="64"
+		frame_wait="0.14"
+		frames_per_row="1"
+		name="stand"
+		pos_x="0"
+		pos_y="0"
+		>
+	</RectAnimation>
+
+</Sprite>

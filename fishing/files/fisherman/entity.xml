@@ -1,0 +1,103 @@
+<Entity>
+	<HotspotComponent
+		_tags="fishing_line"
+		sprite_hotspot_name="line"
+		transform_with_scale="1" >
+	</HotspotComponent>
+	<Entity name="fishing_line_connector">
+		<InheritTransformComponent
+			parent_hotspot_tag="fishing_line"
+			only_position="1" >
+		</InheritTransformComponent>
+	</Entity>
+		
+
+	<Entity name="fishing_line_connector">
+		<InheritTransformComponent
+			parent_hotspot_tag="fishing_line"
+			only_position="1" >
+		</InheritTransformComponent>
+	</Entity>
+
+
+	<LuaComponent
+		script_source_file="mods/fishing/files/fisherman/init_bobber.lua"
+		execute_on_added="1"
+		execute_times="1"
+	>
+	</LuaComponent>		
+
+	<VariableStorageComponent
+        name="direction"
+        value_int="0"
+    ></VariableStorageComponent>
+
+    <SpriteComponent
+      image_file="mods/fishing/files/fisherman/sprite.xml"
+      offset_x="14"
+      offset_y="18"
+      z_index="1"
+      rect_animation="stand"
+      >
+    </SpriteComponent>
+
+	<HitboxComponent 
+		_enabled="1" 
+		aabb_min_x="-10" 
+		aabb_max_x="10" 
+		aabb_min_y="-16" 
+		aabb_max_y="0" 
+		>
+	</HitboxComponent>
+	
+	<CharacterDataComponent
+		collision_aabb_min_x="-10" 
+		collision_aabb_max_x="10" 
+		collision_aabb_min_y="-16" 
+		collision_aabb_max_y="0" 
+		mass="2.4"
+		>
+	</CharacterDataComponent>
+	
+	<CameraBoundComponent
+		max_count="30"
+		distance="160000">
+	</CameraBoundComponent>
+
+  <LuaComponent
+    script_interacting="mods/fishing/files/fisherman/interact.lua"
+    script_source_file="mods/fishing/files/fisherman/interact.lua"
+    execute_every_n_frame="1"
+    enable_coroutines="1"
+    >
+  </LuaComponent>
+
+  <LuaComponent
+    script_source_file="mods/fishing/files/fisherman/inflation_manager.lua"
+    execute_every_n_frame="1"
+  >
+  </LuaComponent>
+
+  <LuaComponent
+	_tags="open_shop"
+	_enabled="0"
+    script_source_file="mods/fishing/files/fisherman/shop.lua"
+    execute_every_n_frame="1"
+    >
+  </LuaComponent>
+
+    <LuaComponent
+	_tags="open_quests"
+	_enabled="0"
+    script_source_file="mods/fishing/files/fisherman/quest_picker.lua"
+    execute_every_n_frame="1"
+    >
+  </LuaComponent>
+
+  <InteractableComponent
+    ui_text="Press $0 to talk to Fisherman"
+    radius="25"
+    >
+  </InteractableComponent>
+
+</Entity>

@@ -1,0 +1,17 @@
+<Sprite 
+  filename="mods/fishing/files/ui/logbook/scanlines.png" 
+  offset_x="0" 
+  offset_y="0"
+  default_animation="default" >
+
+  <RectAnimation 
+    frame_count="4" 
+    frames_per_row="4" 
+    frame_width="320" 
+    frame_height="220" 
+    frame_wait="0.05" 
+    name="default" 
+    pos_x="0" 
+    pos_y="0" >
+  </RectAnimation>
+</Sprite>

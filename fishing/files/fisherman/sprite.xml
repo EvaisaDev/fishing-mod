@@ -1,0 +1,25 @@
+<Sprite 
+	filename="mods/fishing/files/fisherman/sprite.png"
+	hotspots_filename="mods/fishing/files/fisherman/hotspots.png"
+	offset_x="0" 
+	offset_y="0"
+	default_animation="stand"
+  >
+	<Hotspot
+		color="000011ff"
+		name="line"
+		>
+	</Hotspot>
+	<RectAnimation 
+		frame_count="6"
+		frame_width="28"
+		frame_height="28"
+		frame_wait="0.14"
+		frames_per_row="6"
+		name="stand"
+		pos_x="0"
+		pos_y="0"
+		>
+	</RectAnimation>
+
+</Sprite>
